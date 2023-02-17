@@ -18,7 +18,12 @@ namespace BlazorEcommerceTut.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            return Ok(await context.Products.ToListAsync());
+            var response = new ServiceResponse<List<Product>>()
+            { 
+                Data= await context.Products.ToListAsync() 
+            };
+
+            return Ok(response);
         }
     }
 }
