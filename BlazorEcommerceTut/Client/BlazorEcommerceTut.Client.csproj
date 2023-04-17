@@ -15,4 +15,16 @@
     <ProjectReference Include="..\Shared\BlazorEcommerceTut.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\ProductDetails.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\ProductDetails.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\ProductDetails.razor" />
+  </ItemGroup>
+
 </Project>
