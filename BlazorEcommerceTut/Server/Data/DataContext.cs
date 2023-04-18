@@ -10,6 +10,26 @@ namespace BlazorEcommerceTut.Server.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Category>().HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "Books",
+                    Url = "books"
+                },
+                new Category
+                {
+                    Id = 2,
+                    Name = "Movies",
+                    Url = "movies"
+                },
+                new Category
+                {
+                    Id = 3,
+                    Name = "Video Games",
+                    Url = "video-games"
+                }
+                );
             modelBuilder.Entity<Product>().HasData(
                  new Product
                  {
@@ -106,7 +126,8 @@ namespace BlazorEcommerceTut.Server.Data
                     }
                 );
         }
-        public DbSet<Product> Products { get; set;}
-  
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
     }
 }

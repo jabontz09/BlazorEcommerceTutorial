@@ -18,5 +18,7 @@ namespace BlazorEcommerceTut.Shared
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
         public bool Featured { get; set; }
+
+        public Category? Category { get; set; }
     }
 }
